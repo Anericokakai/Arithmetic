@@ -1,20 +1,16 @@
 package triangle;
 class TrianglesArea {
-    double side, area;
+    double base, height;
 
-    public TrianglesArea(double side, double area) {
-        this.side = side;
-        this.area = area;
+    public TrianglesArea(double base, double height) {
+        this.base = base;
+        this.height = height;
     }
 
-    public static double calculateTriangleArea(double side1, double side2, double side3) {
-        // Calculate the semi-perimeter of the triangle
-        double s = (side1 + side2 + side3) / 2;
-
-        // Apply Heron's formula to calculate the area
-        double area = Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+    public static double calculateTriangleArea(double base, double height) {
+        // Calculate the area of the triangle
+        double area = 0.5 * base * height;
 
         return area;
     }
 }
-
