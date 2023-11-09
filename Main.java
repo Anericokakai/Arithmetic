@@ -14,6 +14,7 @@ public class Main {
         TrianglesCalc trianglesArea1=new TrianglesCalc();
         Addition addition=new Addition();
         Subtraction subtraction= new Subtraction();
+        RectanglePerimeter rectanglePerimeter;
 
         CircleArea circleArea=new CircleArea();
         CirlclePerimeter cirlclePerimeter= new CirlclePerimeter();
@@ -34,7 +35,7 @@ public class Main {
 
         System.out.println("4. AREA OF A CIRCLE");
         System.out.println("5. PERIMETER OF A CIRCLE");
-        System.out.println("6. PERIMETER OF A TRIANGLE");
+        System.out.println("6. PERIMETER OF A Rectangle");
         System.out.println("7.  SUBTRACTION");
 
         System.out.println("which operation  would you wish to performe : \n".toUpperCase());
@@ -50,10 +51,9 @@ public class Main {
 
                 System.out.print("Enter the second number: ");
                 secondNumber = scanner.nextInt();
-            int result=    addition.add(firstNumber,secondNumber);
+                int result=    addition.add(firstNumber,secondNumber);
                 System.out.println("thanks for using our service  your  anser is  : "+result);
-
-break;
+                break;
             case 2:
                 System.out.print("Enter the base : ");
 
@@ -62,42 +62,42 @@ break;
                 System.out.print("Enter the height: ");
                 secondNumber = scanner.nextInt();
                 double res=    trianglesArea1.calculateTriangleArea(firstNumber,secondNumber);
-
                 System.out.println("thanks for using our service  your  answer is  : "+res);
+                break;
+            case 6:
+                System.out.print("Enter the Length : ");
+                firstNumber = scanner.nextInt();
+                System.out.print("Enter the Width : ");
+                secondNumber = scanner.nextInt();
+                rectanglePerimeter = new RectanglePerimeter(firstNumber, secondNumber);
+                int   perimeter = rectanglePerimeter.findPerimeter();
+                System.out.println("thanks for using our service  your  answer is  : "+perimeter);
+                break;
             case 7:
                 System.out.print("Enter the first number : ");
-
                 firstNumber = scanner.nextInt();
-
                 System.out.print("Enter the second number: ");
                 secondNumber = scanner.nextInt();
-              int   res7=subtraction.subtract(firstNumber,secondNumber);
+                int   res7=subtraction.subtract(firstNumber,secondNumber);
                 System.out.println("thanks for using our service  your  answer is  : "+res7);
+                break;
             case 4:
                 System.out.print("Enter the the radius of the circle : ");
-
                 firstNumber = scanner.nextInt();
-
                 double   res4=circleArea.area(firstNumber);
                 System.out.println("thanks for using our service  your  answer is  : "+res4);
             case 5:
                 System.out.print("Enter the radius : ");
-
                 firstNumber = scanner.nextInt();
-
-
                double res5=cirlclePerimeter.perimeter(firstNumber);
                 System.out.println("thanks for using our service  your  answer is  : "+res5);
-
+                break;
         }
     } catch (Exception ex){
         throw new Exception("error occured");
     } finally {
         scanner.close();
     }
-
-
-
 
     }
 }
