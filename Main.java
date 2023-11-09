@@ -1,8 +1,5 @@
-import classes.Addition;
-import classes.Subtraction;
-import classes.TrianglesCalc;
+import classes.*;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -17,6 +14,12 @@ public class Main {
         TrianglesCalc trianglesArea1=new TrianglesCalc();
         Addition addition=new Addition();
         Subtraction subtraction= new Subtraction();
+
+        CircleArea circleArea=new CircleArea();
+        CirlclePerimeter cirlclePerimeter= new CirlclePerimeter();
+
+
+
 
 
         int userReq;
@@ -60,7 +63,7 @@ break;
                 secondNumber = scanner.nextInt();
                 double res=    trianglesArea1.calculateTriangleArea(firstNumber,secondNumber);
 
-                System.out.println("thanks for using our service  your  anser is  : "+res);
+                System.out.println("thanks for using our service  your  answer is  : "+res);
             case 7:
                 System.out.print("Enter the first number : ");
 
@@ -69,7 +72,22 @@ break;
                 System.out.print("Enter the second number: ");
                 secondNumber = scanner.nextInt();
               int   res7=subtraction.subtract(firstNumber,secondNumber);
-                System.out.println("thanks for using our service  your  anser is  : "+res7);
+                System.out.println("thanks for using our service  your  answer is  : "+res7);
+            case 4:
+                System.out.print("Enter the the radius of the circle : ");
+
+                firstNumber = scanner.nextInt();
+
+                double   res4=circleArea.area(firstNumber);
+                System.out.println("thanks for using our service  your  answer is  : "+res4);
+            case 5:
+                System.out.print("Enter the radius : ");
+
+                firstNumber = scanner.nextInt();
+
+
+               double res5=cirlclePerimeter.perimeter(firstNumber);
+                System.out.println("thanks for using our service  your  answer is  : "+res5);
 
         }
     } catch (Exception ex){
