@@ -1,9 +1,5 @@
-import classes.Addition;
-import classes.RectanglePerimeter;
-import classes.Subtraction;
-import classes.TrianglesCalc;
+import classes.*;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -19,6 +15,12 @@ public class Main {
         Addition addition=new Addition();
         Subtraction subtraction= new Subtraction();
         RectanglePerimeter rectanglePerimeter;
+
+        CircleArea circleArea=new CircleArea();
+        CirlclePerimeter cirlclePerimeter= new CirlclePerimeter();
+
+
+
 
 
         int userReq;
@@ -73,24 +75,29 @@ public class Main {
                 break;
             case 7:
                 System.out.print("Enter the first number : ");
-
                 firstNumber = scanner.nextInt();
-
                 System.out.print("Enter the second number: ");
                 secondNumber = scanner.nextInt();
                 int   res7=subtraction.subtract(firstNumber,secondNumber);
                 System.out.println("thanks for using our service  your  answer is  : "+res7);
                 break;
-
+            case 4:
+                System.out.print("Enter the the radius of the circle : ");
+                firstNumber = scanner.nextInt();
+                double   res4=circleArea.area(firstNumber);
+                System.out.println("thanks for using our service  your  answer is  : "+res4);
+            case 5:
+                System.out.print("Enter the radius : ");
+                firstNumber = scanner.nextInt();
+               double res5=cirlclePerimeter.perimeter(firstNumber);
+                System.out.println("thanks for using our service  your  answer is  : "+res5);
+                break;
         }
     } catch (Exception ex){
         throw new Exception("error occured");
     } finally {
         scanner.close();
     }
-
-
-
 
     }
 }
