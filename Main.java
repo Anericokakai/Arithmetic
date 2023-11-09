@@ -15,6 +15,8 @@ public class Main {
         Addition addition=new Addition();
         Subtraction subtraction= new Subtraction();
         RectanglePerimeter rectanglePerimeter;
+        Division division = new Division();
+        Multiplication multiplication = new Multiplication();
 
         CircleArea circleArea=new CircleArea();
         CirlclePerimeter cirlclePerimeter= new CirlclePerimeter();
@@ -30,13 +32,13 @@ public class Main {
         System.out.println("welcome to  developers zone !!!!".toUpperCase());
         System.out.println("1. ADDITION");
         System.out.println("2 . MULTIPLICATION");
-
         System.out.println("3. AREA OF A TRIANGLE");
-
         System.out.println("4. AREA OF A CIRCLE");
         System.out.println("5. PERIMETER OF A CIRCLE");
         System.out.println("6. PERIMETER OF A Rectangle");
         System.out.println("7.  SUBTRACTION");
+        System.out.println("8. Division");
+
 
         System.out.println("which operation  would you wish to performe : \n".toUpperCase());
 
@@ -53,6 +55,14 @@ public class Main {
                 secondNumber = scanner.nextInt();
                 int result=    addition.add(firstNumber,secondNumber);
                 System.out.println("thanks for using our service  your  anser is  : "+result);
+                break;
+            case 8:
+                System.out.print("Enter the first number: ");
+                firstNumber = scanner.nextInt();
+                System.out.print("Enter the second number: ");
+                secondNumber = scanner.nextInt();
+                double divresult =    division.divide(firstNumber,secondNumber);
+                System.out.println("thanks for using our service  your  anser is  : "+ divresult);
                 break;
             case 3:
                 System.out.print("Enter the base : ");
@@ -91,6 +101,15 @@ public class Main {
                 firstNumber = scanner.nextInt();
                double res5=cirlclePerimeter.perimeter(firstNumber);
                 System.out.println("thanks for using our service  your  answer is  : "+res5);
+                break;
+            case 2:
+                System.out.print("Enter the first number: ");
+                firstNumber = scanner.nextInt();
+
+                System.out.print("Enter the second number: ");
+                secondNumber = scanner.nextInt();
+                int multresult=    multiplication.multiply(firstNumber,secondNumber);
+                System.out.println("thanks for using our service  your  anser is  : "+multresult);
                 break;
         }
     } catch (Exception ex){
