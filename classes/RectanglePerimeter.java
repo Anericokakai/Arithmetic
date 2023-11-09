@@ -1,14 +1,16 @@
+package classes;
+
 public class RectanglePerimeter {
-    private double length;
-    private double width;
-    public RectanglePerimeter(double length, double width)
+    private int  length;
+    private int width;
+    public RectanglePerimeter(int length, int width)
     {
         this.length = length;
         this.width = width;
     }
 
 
-    public double findPerimeter()
+    public int findPerimeter()
     {
         return 2 * (length + width);
     }
