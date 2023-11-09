@@ -54,7 +54,7 @@ public class Main {
                 int result=    addition.add(firstNumber,secondNumber);
                 System.out.println("thanks for using our service  your  anser is  : "+result);
                 break;
-            case 2:
+            case 3:
                 System.out.print("Enter the base : ");
 
                  firstNumber = scanner.nextInt();
